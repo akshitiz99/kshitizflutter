@@ -1,0 +1,39 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MaterialApp(
+      home: Scaffold(
+    appBar: AppBar(
+      title: Text('wlcome to kshitiz s wrld'),
+      backgroundColor: Colors.grey,
+    ),
+    body: Container(
+        width: double.infinity,
+        height: double.infinity,
+        color: Colors.white70,
+        child: Column(
+          children: <Widget>[
+            Container(
+              alignment: Alignment.topCenter,
+              width: 100,
+              height: 100,
+              color: Colors.blue.shade100,
+              decoration: BoxDecoration(
+                color: Colors.amber.shade100,
+                image: const DecorationImage(
+                  image: NetworkImage(
+                      '![kk](https://user-images.githubusercontent.com/47481268/89740160-0b761080-daa4-11ea-8851-1a3a68741361.JPG)'),
+                  fit: BoxFit.cover,
+                ),
+                border: Border.all(
+                  color: Colors.red.shade200,
+                  width: 10,
+                ),
+                borderRadius: BorderRadius.circular(20),
+              ),
+            )
+            Container()
+          ],
+        )),
+  )));
+}
