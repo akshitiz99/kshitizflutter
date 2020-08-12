@@ -1,0 +1,52 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MaterialApp(
+      home: Scaffold(
+    appBar: AppBar(
+      title: Text('wlcome to kshitiz s wrld'),
+      backgroundColor: Colors.grey,
+    ),
+    body: Container(
+      child: Column(
+        children: <Widget>[
+          Center(
+            child: Container(
+              decoration: BoxDecoration(
+                color: Colors.amber.shade100,
+                borderRadius: BorderRadius.circular(10),
+                border: Border.all(
+                  width: 5,
+                  color: Colors.red.shade200,
+                ),
+              ),
+              width: 300,
+              height: 100,
+              child: TextField(
+                decoration: InputDecoration(
+                    alignLabelWithHint: true,
+                    border: OutlineInputBorder(),
+                    hintText: "type here",
+                    prefixIcon: Icon(Icons.access_time)),
+              ),
+            ),
+          ),
+          Container(
+            alignment: Alignment.topCenter,
+            decoration: BoxDecoration(
+              color: Colors.brown.shade100,
+              borderRadius: BorderRadius.circular(20),
+              border: Border.all(
+                width: 5,
+                color: Colors.green.shade200,
+              ),
+            ),
+            width: 100,
+            height: 50,
+            child: FlatButton(onPressed: null, child: Text('ok')),
+          ),
+        ],
+      ),
+    ),
+  )));
+}
