@@ -1,0 +1,221 @@
+import 'package:flutter/material.dart';
+import 'package:audioplayers/audio_cache.dart';
+
+void main() {
+  runApp(MaterialApp(
+    title: 'Navigation Basics',
+    home: FirstRoute(),
+  ));
+}
+
+class FirstRoute extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          'ᴋ𝖚𝖟𝖎𝖈♪♪..         🎧',
+          style: TextStyle(
+              fontSize: 39,
+              foreground: Paint()
+                ..style = PaintingStyle.fill
+                ..strokeWidth = 8
+                ..color = Colors.blue.shade100),
+        ),
+        backgroundColor: Colors.blue.shade900,
+      ),
+      body: Container(
+        height: double.infinity,
+        width: double.infinity,
+        constraints: BoxConstraints.expand(),
+        decoration: BoxDecoration(
+            image: DecorationImage(
+                image: NetworkImage(
+                    "https://raw.githubusercontent.com/akshitiz99/kshitizflutter/master/WhatsApp%20Image%202020-08-13%20at%202.14.41%20AM.jpeg"),
+                fit: BoxFit.cover)),
+        child: Center(
+          child: RaisedButton(
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10),
+                side: BorderSide(color: Colors.black)),
+            color: Colors.red.shade500,
+            child: Text(
+              '𝖕𝖑𝖆𝖞',
+              style: TextStyle(
+                fontSize: 30,
+              ),
+            ),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => SecondRoute()),
+              );
+            },
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class SecondRoute extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.red.shade500,
+        title: Text(
+          "𝖊𝖓𝖏𝖔𝖞 𝖑𝖆𝖙𝖊𝖘𝖙 𝖙𝖗𝖆𝖈𝖐𝖘",
+          style: TextStyle(
+            fontSize: 30,
+            foreground: Paint()
+              ..style = PaintingStyle.fill
+              ..strokeWidth = 8
+              ..color = Colors.black54,
+          ),
+        ),
+      ),
+      body: Container(
+        height: double.infinity,
+        width: double.infinity,
+        constraints: BoxConstraints.expand(),
+        decoration: BoxDecoration(
+            image: DecorationImage(
+                image: NetworkImage(
+                    "https://raw.githubusercontent.com/akshitiz99/kshitizflutter/master/08695c95068fc4f56d3d29462640d2be.jpg"),
+                fit: BoxFit.cover)),
+        child: Column(
+          children: <Widget>[
+            Container(
+              color: Colors.transparent,
+              height: 80,
+              width: double.infinity,
+              child: Center(
+                  child: Text('𝕿𝖗𝖊𝖓𝖉𝖎𝖓𝖌 𝕹𝖔 1..',
+                      style: TextStyle(
+                        fontSize: 30,
+                        foreground: Paint()
+                          ..style = PaintingStyle.fill
+                          ..strokeWidth = 8
+                          ..color = Colors.grey.shade100,
+                      ))),
+            ),
+            Center(
+              child: RaisedButton(
+                child: Text('▶'),
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(30),
+                    side: BorderSide(color: Colors.black)),
+                color: Colors.grey.shade300,
+                onPressed: () {
+                  var p = AudioCache();
+                  p.play('1.mp3');
+                },
+              ),
+            ),
+            Container(
+              color: Colors.transparent,
+              height: 80,
+              width: double.infinity,
+              child: Center(
+                  child: Text('𝕿𝖗𝖊𝖓𝖉𝖎𝖓𝖌 𝕹𝖔 2..',
+                      style: TextStyle(
+                        fontSize: 30,
+                        foreground: Paint()
+                          ..style = PaintingStyle.fill
+                          ..strokeWidth = 8
+                          ..color = Colors.grey.shade100,
+                      ))),
+            ),
+            Center(
+              child: RaisedButton(
+                child: Text('▶'),
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(30),
+                    side: BorderSide(color: Colors.black)),
+                color: Colors.grey.shade300,
+                onPressed: () {
+                  var q = AudioCache();
+                  q.play('2.mp3');
+                },
+              ),
+            ),
+            Container(
+              color: Colors.transparent,
+              height: 80,
+              width: double.infinity,
+              child: Center(
+                  child: Text('𝕿𝖗𝖊𝖓𝖉𝖎𝖓𝖌 𝕹𝖔 3..',
+                      style: TextStyle(
+                        fontSize: 30,
+                        foreground: Paint()
+                          ..style = PaintingStyle.fill
+                          ..strokeWidth = 8
+                          ..color = Colors.grey.shade100,
+                      ))),
+            ),
+            Center(
+              child: RaisedButton(
+                child: Text('▶'),
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(30),
+                    side: BorderSide(color: Colors.black)),
+                color: Colors.grey.shade300,
+                onPressed: () {
+                  var w = AudioCache();
+                  w.play('3.mp3');
+                },
+              ),
+            ),
+            Container(
+              color: Colors.transparent,
+              height: 80,
+              width: double.infinity,
+              child: Center(
+                  child: Text(
+                '𝕿𝖗𝖊𝖓𝖉𝖎𝖓𝖌 𝕹𝖔 4..',
+                style: TextStyle(
+                  fontSize: 30,
+                  foreground: Paint()
+                    ..style = PaintingStyle.fill
+                    ..strokeWidth = 8
+                    ..color = Colors.grey.shade100,
+                ),
+              )),
+            ),
+            Center(
+              child: RaisedButton(
+                child: Text('▶'),
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(30),
+                    side: BorderSide(color: Colors.black)),
+                color: Colors.grey.shade300,
+                onPressed: () {
+                  var r = AudioCache();
+                  r.play('4.mp3');
+                },
+              ),
+            ),
+            Container(
+              color: Colors.transparent,
+              height: 60,
+              width: double.infinity,
+            ),
+            Center(
+              child: RaisedButton(
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                    side: BorderSide(color: Colors.black)),
+                color: Colors.red.shade600,
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                child: Text('Go back!'),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
